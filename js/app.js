@@ -12,6 +12,13 @@ const tiles = Array.from(document.querySelectorAll('.tile'))
 const displayPlayer = document.querySelector('.display-player')
 const resetButton = document.querySelector('#reset')
 const state = document.querySelector('.announcer')
+//Scoreboard Constants
+const playerOneScoreDisplay = document.getElementById('playerOneScoreDisplay')
+let playerOneScore = 0
+const playerTwoScoreDisplay = document.getElementById('playerTwoScoreDisplay')
+let playerTwoScore = 0
+const playerTieScoreDisplay = document.getElementById('playerTieScoreDisplay')
+let playerTieScore = 0
 
 //Win Conditions
 const winningConditions = [
@@ -58,13 +65,19 @@ const announce = (type) => {
     case playerTwo:
       state.innerHTML =
         'Player <span class="playerO">O</span> Has Beaten Player <span class="playerX">X</span>!'
+      playerTwoScore = playerTwoScore + 1
+      playerTwoScoreDisplay.innerText = playerTwoScore
       break
     case playerOne:
       state.innerHTML =
         'Player <span class="playerX">X</span> Has Beaten Player <span class="playerO">O</span>!'
+      playerOneScore = playerOneScore + 1
+      playerOneScoreDisplay.innerText = playerOneScore
       break
     case tie:
       state.innerText = "It's a Tie :("
+      playerTieScore = playerTieScore + 1
+      playerTieScoreDisplay.innerText = playerTieScore
   }
   state.classList.remove('hide')
 }
@@ -103,9 +116,9 @@ const gameReset = () => {
   gameOn = true
   state.classList.add('hide')
 
-  if (currentPlayer === 'O') {
-    changePlayer()
-  }
+  //   if (currentPlayer === 'O') {
+  //     changePlayer()
+  //   }
 
   tiles.forEach((tile) => {
     tile.innerText = ''

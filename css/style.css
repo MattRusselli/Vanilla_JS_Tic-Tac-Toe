@@ -48,11 +48,13 @@
   font-size: 50px;
 }
 
-.playerX {
+.playerX,
+#playerOneDisplay {
   color: orange;
 }
 
-.playerO {
+.playerO,
+#playerTwoDisplay {
   color: ghostwhite;
 }
 
@@ -78,4 +80,21 @@
 
 #reset {
   background-color: silver;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+#score {
+  display: grid;
+  text-align: center;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 20vw;
+  font-size: 30px;
 }
