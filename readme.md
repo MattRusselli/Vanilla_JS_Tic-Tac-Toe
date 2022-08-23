@@ -8,6 +8,10 @@
 
 ---
 
+### **_Deployed Game_**
+
+#### [Tic-Tac-Toe](https://delirious-cherries.surge.sh/)
+
 ### **_Description_**
 
 #### A simple browser Tic-Tac-Toe game built with vanilla Javascript
