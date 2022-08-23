@@ -36,4 +36,4 @@
 ### **_Future Goals_**
 
 - Implement a simple AI so users can have the option to play solo.
-  - A more coplex AI with logic to try to beat the user.
+  - A more complex AI with logic to try to beat the user.
